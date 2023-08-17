@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreEntrega1-Solari</title>
+    <title>Futuro descuento de servicios</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <h1>PreEntrega-1</h1>
+    <div class="container">
+        <form id="Form1">
+            <h3>Descuento del 20% AQUÍ</h3>
+            <input type="texto" placeholder="Email" required>
+            <input type="contraseña" placeholder="Contraseña" required>
+            <input type="contraseña" placeholder="Confirmar contraseña" required>
+
+            <div class="btn-box">
+                <button type="button" id="siguiente1">Siguiente</button>
+
+
+            </div>
+        </form>
+
+
+
+        <form id="Form2">
+            <h3>LINKS SOCIALES</h3>
+            <input type="texto" placeholder="Medium">
+            <input type="texto" placeholder="Github">
+            <input type="texto" placeholder="Behance">
+
+
+            <div class="btn-box">
+                <button type="button" id="Atras1">Atras</button>
+                <button type="button" id="siguiente2">Siguiente</button>
+            </div>
+        </form>
+
+        <form id="Form3">
+            <h3>Personal Info</h3>
+            <input type="texto" placeholder="Primer Nombres" required>
+            <input type="texto" placeholder="Last Name" required>
+            <input type="texto" placeholder="Correo Electronico" required>
+
+
+            <div class="btn-box">
+                <button type="button" id="atras2">Atras</button>
+                <button type="Terminar">Terminar</button>
+            </div>
+        </form>
+
+        <dvi class="step-row">
+            <div id="progreso"></div>
+            <div class="step-col"><small>Paso 1</small></div>
+            <div class="step-col"><small>Paso 2</small></div>
+            <div class="step-col"><small>Paso 3</small></div>
+        </dvi>
+        <script>
+            var Form1 = document.getElementById("Form1");
+            var Form2 = document.getElementById("Form2");
+            var Form3 = document.getElementById("Form3");
+
+            var siguiente1 = document.getElementById("siguiente1");
+            var siguiente2 = document.getElementById("siguiente2");
+            var Atras1 = document.getElementById("Atras1");
+            var atras2 = document.getElementById("atras2");
+
+            var progreso= document.getElementById("progreso");
+
+            siguiente1.onclick = function () {
+                Form1.style.left = "-450px";
+                Form2.style.left = "40px";
+                progreso.style.width ="240px";
+            }
+
+            Atras1.onclick = function () {
+                Form1.style.left = "40px";
+                Form2.style.left = "450px";
+                progreso.style.width ="120px";
+            }
+
+            siguiente2.onclick = function () {
+                Form2.style.left = "-450px";
+                Form3.style.left = "40px";
+                progreso.style.width ="360px";
+            }
+
+            atras2.onclick = function () {
+                Form2.style.left = "40px";
+                Form3.style.left = "450px";
+                progreso.style.width ="240px";
+            }
+
+
+
+        </script>
+
+    </div>
     <script src="/main.js"></script>
+
+
 </body>
+
 </html>
